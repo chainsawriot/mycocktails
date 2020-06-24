@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Cocktails
 
-```{r}
+```{r, message=FALSE,echo=FALSE}
 require(rio)
 require(tidyverse)
 require(DT)
