@@ -14,5 +14,5 @@ require(rio)
 require(tidyverse)
 require(DT)
 
-rio::import("cocktails.csv") %>% select(drink, glass, ingredient, measure) %>% datatable()
+rio::import("cocktails.csv") %>% bind_rows(rio::import("tschunk.csv")) %>% select(drink, glass, ingredient, measure) %>% datatable()
 ```
