@@ -1,0 +1,18 @@
+---
+title: "Cocktails"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Cocktails
+
+```{r}
+require(rio)
+require(tidyverse)
+require(DT)
+
+rio::import("cocktails.csv") %>% select(drink, glass, ingredient, measure) %>% datatable()
+```
